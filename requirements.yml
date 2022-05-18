@@ -1,4 +1,4 @@
 roles:
   - name: x11vnc
-    src: git@github.com:rockdarko/x11vnc.git
+    src: git+git@github.com:rockdarko/x11vnc.git
     version: main
