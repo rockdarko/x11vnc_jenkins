@@ -1,0 +1,6 @@
+- hosts: all
+  become: yes
+  tasks:
+  - name: x11vnc
+    include_role:
+      name: x11vnc
