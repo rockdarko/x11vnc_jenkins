@@ -21,7 +21,7 @@ pipeline {
         }
         stage ('Deploy') {
             steps {
-                sh "ansible-playbook -i /cellardoor/env/${env.ENV}/${env.ENV}.hosts -l ${env.HOST} -e x11vnc_action=${env.ACTION} -e x11vnc_password=${env.PASSWORD} -e x11vnc_autostart=${env.AUTOSTART} deploy.yml"
+                sh "ansible-playbook -i /cellardoor/env/${env.ENV}/${env.ENV}.hosts -l ${env.HOST} -e x11vnc_action=install -e x11vnc_password=${env.PASSWORD} -e x11vnc_autostart=${env.AUTOSTART} deploy.yml"
             }        
 		}
     }
